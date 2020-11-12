@@ -1,0 +1,252 @@
+@media only screen and (max-width: 768px){
+    /* This is for mobile. */
+    .img-bg-div{
+        position: absolute;
+        width: 90%;
+        left: 1rem;
+        right: 1rem;
+        height: 25rem;
+        top: 42rem;
+        z-index: 1;
+        background-image: url('../../Resources/Bgs/3731109\ 1.png');
+        background-size: cover;
+    }
+    .login-div{
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .left-login-div{
+        width: 100vw;
+        height: 15rem;
+        background-color: #802D35;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .l-div1{
+        width: 90%;
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+    .l-div1 h2{
+        font-family: 'poppins', sans-serif;
+        color: #ffffff;
+    }
+    .l-div2{
+        width: 80%;
+        margin-top: 1rem;
+        font-family: 'poppins', sans-serif;
+        margin-left: 2rem;
+        color: #fdcccc;
+        line-height: 1.8rem;
+        letter-spacing: 1px;
+    
+    }
+    .l-div2 span{
+        font-size: 18px;
+        color: #ffffff;
+        font-family: 'poppins', sans-serif;
+    }
+    .l-div3{
+        width: 20rem;
+        height: 16rem;
+    }
+    .right-login-div{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+    }
+    .input-div{
+        width: 90%;
+        height: 15rem;
+        border-radius: 10px;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .phone-div{
+        width: 100% !important;
+        height: 3rem;
+        display: flex;
+    }
+    .country-code-div2{
+        width: 10% !important;
+        height: 3rem;
+        text-align: center;
+        line-height: 3.8rem;
+        color: #d45059;
+    }
+    .login-inpt-field{
+        width: 100% !important;
+        margin-top: 1rem !important;
+    }
+    .f-login-btn{
+        width: 30%;
+        height: 2.5rem;
+        color: #ffffff;
+        background-color: #FF4F5A;
+        font-family: 'poppins', sans-serif;
+        outline: none;
+        border: 2px solid #FF4F5A;
+        border-radius: 6px;
+        margin-top: 1rem;
+        transition: all 0.5s;
+    }
+    .f-login-btn:hover{
+        transform: scaleX(1.1);
+    }
+    .f-login-btn:focus{
+        outline: none;
+    }
+    .bottom-div{
+        width: 100vw;
+        height: 2rem;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .to-signup{
+        color: #d45059;
+        line-height: 2rem;
+        text-decoration: none;
+    }
+    .to-signup:hover{
+        color: #d1414a;
+        text-decoration: none;
+        text-decoration: underline;
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+    /* This is for desktop. */
+    .img-bg-div{
+        position: absolute;
+        width: 25rem;
+        height: 25rem;
+        top: 10rem;
+        left: 54rem;
+        z-index: 1;
+        background-image: url('../../Resources/Bgs/3731109\ 1.png');
+        background-size: cover;
+    }
+    .login-div{
+        position: absolute;
+        top: 5rem;
+        left: 6rem;
+        width: 50rem;
+        height: 30rem;
+        display: flex;
+    }
+    .left-login-div{
+        width: 20rem;
+        height: 100%;
+        background-color: #802D35;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .l-div1{
+        width: 90%;
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+    .l-div1 h2{
+        font-family: 'poppins', sans-serif;
+        color: #ffffff;
+    }
+    .l-div2{
+        width: 80%;
+        margin-top: 1rem;
+        font-family: 'poppins', sans-serif;
+        margin-left: 2rem;
+        color: #fdcccc;
+        line-height: 1.8rem;
+        letter-spacing: 1px;
+    
+    }
+    .l-div2 span{
+        font-size: 18px;
+        color: #ffffff;
+        font-family: 'poppins', sans-serif;
+    }
+    .l-div3{
+        width: 20rem;
+        height: 16rem;
+    }
+    .right-login-div{
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        background-color: transparent;
+    }
+    .input-div{
+        width: 80%;
+        height: 15rem;
+        border-radius: 10px;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .phone-div{
+        width: 100% !important;
+        height: 3rem;
+        display: flex;
+    }
+    .country-code-div2{
+        width: 10% !important;
+        height: 3rem;
+        text-align: center;
+        line-height: 3.8rem;
+        color: #d45059;
+    }
+    .login-inpt-field{
+        width: 100% !important;
+        margin-top: 1rem !important;
+    }
+    .f-login-btn{
+        width: 30%;
+        height: 2.5rem;
+        color: #ffffff;
+        background-color: #FF4F5A;
+        font-family: 'poppins', sans-serif;
+        outline: none;
+        border: 2px solid #FF4F5A;
+        border-radius: 6px;
+        margin-top: 1rem;
+        margin-left: 16.8rem;
+        transition: all 0.5s;
+    }
+    .f-login-btn:hover{
+        transform: scaleX(1.1);
+    }
+    .f-login-btn:focus{
+        outline: none;
+    }
+    .bottom-div{
+        width: 80%;
+        height: 2rem;
+        margin-top: 8rem;
+        align-items: center;
+        text-align: center;
+    }
+    .to-signup{
+        color: #d45059;
+        line-height: 2rem;
+        text-decoration: none;
+    }
+    .to-signup:hover{
+        color: #d1414a;
+        text-decoration: none;
+        text-decoration: underline;
+    }
+}
+

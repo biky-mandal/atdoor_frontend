@@ -1,0 +1,352 @@
+@media only screen and (max-width: 768px){
+    /* For mobile. */
+    .img-bg-div1{
+        position: absolute;
+        width: 90%;
+        height: 25rem;
+        top: 48rem;
+        left: 1rem;
+        right: 1rem;
+        z-index: 1;
+        background-image: url('../../Resources/Bgs/3731109.png');
+        background-size: cover;
+    }
+    .signup-div{
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .left-signup-div{
+        width: 100vw;
+        height: 15rem;
+        background-color: #385A64;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .l-div1{
+        width: 90%;
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+    .l-div1 h2{
+        font-family: 'poppins', sans-serif;
+        color: #ffffff;
+    }
+    .l-div22{
+        width: 80%;
+        margin-top: 1rem;
+        font-family: 'poppins', sans-serif;
+        margin-left: 2rem;
+        color: #cecece;
+        line-height: 1.8rem;
+        letter-spacing: 1px;
+    
+    }
+    .l-div22 span{
+        font-size: 18px;
+        color: #ffffff;
+        font-family: 'poppins', sans-serif;
+    }
+    .right-reg-div{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        background-color: transparent;
+    }
+    .reg-input-div{
+        width: 90%;
+        height: 16rem;
+        border-radius: 10px;
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .phone-div{
+        width: 100% !important;
+        height: 3rem;
+        display: flex;
+    }
+    .number-div{
+        width: 100% !important;
+        height: 3rem;
+        line-height: 3rem;
+        padding-left: 1rem;
+    }
+    .reg-inpt-field{
+        width: 100% !important;
+    }
+    .next-btn{
+        width: 30%;
+        height: 2.5rem;
+        color: #385A64;
+        background-color: #FFC801;
+        font-family: 'poppins', sans-serif;
+        outline: none;
+        border: 2px solid #FFC801;
+        border-radius: 6px;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .code-div{
+        width: 100% !important;
+        height: 3rem;
+        margin-top: 1rem;
+    }
+    .code-inpt-field{
+        width: 100% !important;
+        height: 3rem;
+    }
+    .register-btn{
+        width: 30%;
+        height: 2.5rem;
+        color: #385A64;
+        background-color: #FFC801;
+        font-family: 'poppins', sans-serif;
+        outline: none;
+        border: 2px solid #FFC801;
+        border-radius: 6px;
+        margin-top: 1rem;
+        transition: all 0.5s;
+    }
+    .register-btn:hover{
+        transform: scaleX(1.1);
+    }
+    .reg-bottom-div{
+        width: 80%;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .to-login{
+        color: #385A64;
+        line-height: 2rem;
+        text-decoration: none;
+    }
+    .to-login:hover{
+        color: #245564;
+        text-decoration: none;
+        text-decoration: underline;
+    }
+    .alert-label{
+        background-color: #91ff0154;
+        color: #419c0b;
+        font-family: 'poppins', sans-serif;
+        font-size: 14px;
+        padding: 0 1rem;
+    }
+    .loader_in_signup{
+        position: absolute;
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    /* For Desktop. */
+
+    .img-bg-div1{
+        position: absolute;
+        width: 25rem;
+        height: 25rem;
+        top: 10rem;
+        left: 54rem;
+        z-index: 1;
+        background-image: url('../../Resources/Bgs/3731109.png');
+        background-size: cover;
+    }
+    .signup-div{
+        position: absolute;
+        top: 5rem;
+        left: 6rem;
+        width: 50rem;
+        height: 30rem;
+        display: flex;
+        border-radius: 10px;
+    }
+    .left-signup-div{
+        width: 20rem;
+        height: 100%;
+        background-color: #385A64;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .l-div1{
+        width: 90%;
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+    .l-div1 h2{
+        font-family: 'poppins', sans-serif;
+        color: #ffffff;
+    }
+    .l-div22{
+        width: 80%;
+        margin-top: 1rem;
+        font-family: 'poppins', sans-serif;
+        margin-left: 2rem;
+        color: #cecece;
+        line-height: 1.8rem;
+        letter-spacing: 1px;
+    
+    }
+    .l-div22 span{
+        font-size: 18px;
+        color: #ffffff;
+        font-family: 'poppins', sans-serif;
+    }
+    .right-reg-div{
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 0 10px 10px 0;
+    }
+    .reg-input-div{
+        width: 75%;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .phone-div{
+        width: 100% !important;
+        height: 3rem;
+        display: flex;
+    }
+    .number-div{
+        width: 100% !important;
+        height: 3rem;
+        line-height: 3rem;
+    }
+    .reg-inpt-field{
+        width: 100% !important;
+    }
+
+    .code-sent-div{
+        width: 100% !important;
+        height: 2rem;
+        margin-top: 1rem;
+        display: flex;
+    }
+    .code-sent-div label{
+        font-size: 14px;
+        left: 0;
+        line-height: 2rem;
+        font-family: 'poppins', sans-serif;
+
+    }
+    .code-sent-div span{
+        position: relative;
+        font-size: 16px;
+        right: 0;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        font-family: 'poppins', sans-serif;
+        margin-left: 10.8rem;
+        color: #385A64;
+        line-height: 2rem;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .next-btn{
+        width: 30%;
+        height: 2.5rem;
+        color: #385A64;
+        background-color: #FFC801;
+        font-family: 'poppins', sans-serif;
+        outline: none;
+        border: 2px solid #FFC801;
+        border-radius: 6px;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .code-div{
+        width: 100% !important;
+        height: 3rem;
+        margin-top: 1rem;
+    }
+    .code-inpt-field{
+        width: 100% !important;
+        height: 3rem;
+    }
+    .register-btn{
+        width: 30%;
+        height: 2.5rem;
+        color: #385A64;
+        background-color: #FFC801;
+        font-family: 'poppins', sans-serif;
+        outline: none;
+        border: 2px solid #FFC801;
+        border-radius: 6px;
+        margin-top: 1rem;
+        transition: all 0.5s;
+    }
+    .register-btn:hover{
+        transform: scaleX(1.1);
+    }
+    .reg-bottom-div{
+        width: 80%;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .to-login{
+        color: #385A64;
+        line-height: 2rem;
+        text-decoration: none;
+    }
+    .to-login:hover{
+        color: #245564;
+        text-decoration: none;
+        text-decoration: underline;
+    }
+    .alert-label{
+        background-color: #5eff0154;
+        color: #2a830f;
+        font-family: 'poppins', sans-serif;
+        font-size: 14px;
+        padding: 0 1rem;
+        z-index: 122;
+    }
+    .loader_in_signup{
+        position: absolute;
+        margin-top: 5rem;
+    }
+    .otp_verified{
+        background-color: #89e6544b;
+        color: #3c910b;
+        font-family: 'poppins', sans-serif;
+        padding: 0.1rem 1rem;
+        border-radius: 5px;
+        font-size: 12px;
+        margin-top: 0.5rem;
+    }
+    .otp_not_verified{
+        background-color: #e654544b;
+        color: #910b0b;
+        font-family: 'poppins', sans-serif;
+        padding: 0.1rem 1rem;
+        border-radius: 5px;
+        font-size: 12px;
+        margin-top: 0.5rem;
+    }
+}
