@@ -143,7 +143,124 @@
     } */
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .navbar-bg{
+        background-color: #18a770 !important;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+    .drop-div{ 
+        cursor: pointer;
+        text-align: center;
+        width: 6rem;
+        height: 2rem;
+        line-height: 2rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        background-color: #ffffff;
+        transition: all 0.3s;
+        padding-left: 1em;
+        padding-right: 1rem;
+    }
+    .login-lbl{
+        color: #4c5c78;
+        letter-spacing: 1px;
+    }
+    .login-lbl:hover{
+        text-decoration: none;
+        color: #18a770;
+    }
+    .more-div{
+        cursor: pointer;
+        text-align: center;
+        width: 6rem;
+        height: 2rem;
+        line-height: 2rem;
+        transition: all 0.3s;
+        padding-left: 1em;
+        padding-right: 1rem;
+    }
+    .more-div label span{
+        padding: 3px;
+    }
+    .more-lbl{
+        cursor: pointer;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+    }
+    .more-lbl:hover{
+        color: #a3e4b7;
+    }
+    .drop-down-div{
+        position: absolute;
+        width: 15rem;
+        height: auto;
+        right: 12rem;
+        top: 3.5rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 1px 20px #00000036;
+        display: block;
+    }
+    .drop-ele{
+        width: 100%;
+        height: 2rem;
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    .more-ele-lbl{
+        line-height: 2rem;
+        padding-left: 1rem;
+        color: #4c5c78;
+        font-size: 16px;
+        cursor: pointer;
+        font-family: 'poppins', sans-serif;
+    }
+    .more-ele-lbl:hover{
+        text-decoration: none;
+        color: #18a770;
+    }
+    .more-ele-lbl span{
+        padding: 1rem;
+        font-size: 20px;
+        line-height: 2rem;
+        color: #18a770;
+    }
+    .search-form{
+        background-color: white;
+    }
+    .inpt-field{
+        border: none;
+        height: 2rem;
+        /* border-left: 3px solid #4c5c78; */
+        transition: all 0.1s;
+    }
+    .inpt-field:focus{
+        border: none;
+        box-shadow: none;
+        outline: 0 none;
+    }
+    .search-btn{
+        width: 2rem;
+        height: 2rem;
+        outline: none;
+        border: none;
+        background-color: white;
+        color: #4c5c78;
+        transition: all 0.5s;
+    }
+    .search-btn:hover{
+        color: #06990e;
+    }
+}
+
+@media only screen and (min-width: 1025px){
     /* For desktops */
     .navbar-bg{
         background-color: #18a770 !important;

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1024px){
     /* For mobile. */
     .img-bg-div1{
         position: absolute;
@@ -77,7 +77,6 @@
         width: 100% !important;
         height: 3rem;
         line-height: 3rem;
-        padding-left: 1rem;
     }
     .reg-inpt-field{
         width: 100% !important;
@@ -148,17 +147,24 @@
         margin-top: 5rem;
     }
 }
+/* 
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    
+}
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+
+} */
+
+@media only screen and (min-width: 1025px){
     /* For Desktop. */
 
     .img-bg-div1{
         position: absolute;
-        width: 25rem;
-        height: 25rem;
-        top: 10rem;
-        left: 54rem;
-        z-index: 1;
+        width: 30vw;
+        height: 70vh;
+        top: 8rem;
+        right: 3rem;
         background-image: url('../../Resources/Bgs/3731109.png');
         background-size: cover;
     }

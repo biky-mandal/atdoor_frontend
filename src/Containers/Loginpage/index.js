@@ -53,9 +53,6 @@ const Loginpage = (props) => {
                         onSubmit={login_btn_clicked}
                         className="input-div">
                         <div className="phone-div">
-                            <div className="country-code-div2">
-                                +91
-                            </div>
                             <div className="number-div">
                                 <TextValidator
                                     className="reg-inpt-field"

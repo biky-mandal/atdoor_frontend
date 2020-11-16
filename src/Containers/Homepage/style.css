@@ -1,0 +1,170 @@
+@media only screen and (max-width: 768px){
+    .vege-products{
+        height: 22rem;
+        background-color: rgb(255, 255, 255);
+        margin: 0.5% 0.5%;
+        box-shadow: 1px 1px 5px #69696963;
+        border-radius: 5px ;
+        overflow-x: visible;
+    }
+    
+    .Product-title-div{
+        width: 100%;
+        height: 3rem;
+        background-color: #ffffff;
+        border-bottom: 1px solid silver;
+    }
+    .Product-title-div label{
+        text-align: left;
+    }
+    .Product-title-div a{
+        text-align: right;
+    }
+    .Product-title{
+        line-height: 3rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        position: absolute;
+        left: 1rem;
+    }
+    .view-more{
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        border: 2px solid #18a770;
+        text-decoration: none;
+        color: #ffffff;
+        line-height: 1.8rem;
+        padding: 0rem 1rem;
+        position: absolute;
+        margin-top: 0.5rem;
+        right: 1rem;
+        background-color: #18a770;
+    }
+    .view-more:hover{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .vege-products{
+        height: 21rem;
+        background-color: rgb(255, 255, 255);
+        margin: 0.5% 0.5%;
+        box-shadow: 1px 1px 5px #69696963;
+        border-radius: 5px ;
+        overflow-x: scroll;
+    }
+    
+    .Product-title-div{
+        width: 100%;
+        height: 3rem;
+        background-color: #ffffff;
+        border-bottom: 1px solid silver;
+    }
+    .Product-title-div label{
+        text-align: left;
+    }
+    .Product-title-div a{
+        text-align: right;
+    }
+    .Product-title{
+        line-height: 3rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        position: absolute;
+        left: 2rem;
+    }
+    .view-more{
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        border: 2px solid #18a770;
+        text-decoration: none;
+        color: #ffffff;
+        line-height: 1.8rem;
+        padding: 0rem 1rem;
+        position: absolute;
+        margin-top: 0.5rem;
+        right: 2rem;
+        background-color: #18a770;
+    }
+    .view-more:hover{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+    .vege-products{
+        height: 28rem;
+        width: 99%;
+        background-color: rgb(255, 255, 255);
+        margin: 0.5% 0.5%;
+        box-shadow: 1px 1px 5px #69696963;
+        border-radius: 5px 
+    }
+    
+    .Product-title-div{
+        width: 100%;
+        height: 3rem;
+        background-color: #ffffff;
+        border-bottom: 1px solid silver;
+    }
+    .Product-title-div label{
+        text-align: left;
+    }
+    .Product-title-div a{
+        text-align: right;
+    }
+    .Product-title{
+        line-height: 3rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        position: absolute;
+        left: 2rem;
+    }
+    .view-more{
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        border: 2px solid #18a770;
+        text-decoration: none;
+        color: #ffffff;
+        line-height: 1.8rem;
+        padding: 0rem 1rem;
+        position: absolute;
+        margin-top: 0.5rem;
+        right: 2rem;
+        background-color: #18a770;
+    }
+    .view-more:hover{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
