@@ -3,7 +3,8 @@ import './style.css';
 // from bootstarp
 import { Navbar, NavDropdown, Nav, Form, Button, FormControl } from 'react-bootstrap';
 //
-import { FiUser, FiLogIn, FiUserPlus, FiSearch, FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { FiUser, FiLogIn, FiUserPlus, FiSearch, FiChevronDown, FiChevronUp, FiShoppingCart } from "react-icons/fi";
+import {FaShoppingCart} from 'react-icons/fa'
 import { BsChat, BsExclamationCircle, BsCardChecklist, BsBackspace } from "react-icons/bs";
 // Link
 import { NavLink, Redirect } from 'react-router-dom';
@@ -87,7 +88,7 @@ const Header = (props) => {
                             <label id="more_btn" className="more-lbl" onClick={expandMore}>More{showMore ? <span>{showMore}<FiChevronUp /></span> : <span>{showMore}<FiChevronDown /></span>}</label>
                         </div>
                         {register.authenticate ? <div className="drop-div">
-                        <NavLink to="profile" className="login-lbl">{register.customer.fullName}</NavLink>
+                        <NavLink to="cart" className="login-lbl"><FaShoppingCart/> cart</NavLink>
                         </div>
                         : null
                         }

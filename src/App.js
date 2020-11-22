@@ -11,12 +11,16 @@ import Fruit_Page from './Containers/CategoryPages/Fruits';
 import DryFish_Page from './Containers/CategoryPages/DryFish';
 import Grocery_Page from './Containers/CategoryPages/Grocery';
 import Dairy_Page from './Containers/CategoryPages/Dairy';
+import CartPage from './Containers/Cartpage';
+
+import { Get_initialdata } from './Actions';
 
 
 import { useDispatch, useSelector } from 'react-redux';
 import { isUserLoggedIn } from './Actions';
 // private Route
 import PrivateRoute from './Components/HOC/Private_Route';
+import { fetch_cart_action } from './Actions/fetchCart_action';
 
 function App() {
 
@@ -24,25 +28,27 @@ function App() {
   const register = useSelector(state => state.register);
 
   useEffect(() => {
-    if(!register.authenticate){
+    if (!register.authenticate) {
       dispatch(isUserLoggedIn());
     }
+
+    dispatch(Get_initialdata());
   })
 
   return (
     <div className="App">
       <Switch>
-        <Route path="/" exact component={Homepage}/>
-        <PrivateRoute path="/profile" component={Profile_Page}/>
-        <PrivateRoute path="/order" component={Order_Page}/>
-        <Route path="/signup" component={Signuppage}/>
-        <Route path="/login" component={Loginpage}/>
+        <Route path="/" exact component={Homepage} />
+        <PrivateRoute path="/profile" component={Profile_Page} />
+        <PrivateRoute path="/order" component={Order_Page} />
+        <PrivateRoute path="/cart" component={CartPage} />
+        <Route path="/signup" component={Signuppage} />
+        <Route path="/login" component={Loginpage} />
         <Route path="/vegetables" component={Vegetable_Page} />
         <Route path="/fruits" component={Fruit_Page} />
         <Route path="/dryfishes" component={DryFish_Page} />
         <Route path="/groceries" component={Grocery_Page} />
         <Route path="/dairy" component={Dairy_Page} />
-
       </Switch>
     </div>
   );

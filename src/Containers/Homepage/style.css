@@ -1,6 +1,6 @@
 @media only screen and (max-width: 768px){
     .vege-products{
-        height: 22rem;
+        height: 30rem;
         background-color: rgb(255, 255, 255);
         margin: 0.5% 0.5%;
         box-shadow: 1px 1px 5px #69696963;
@@ -57,7 +57,7 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px){
     .vege-products{
-        height: 21rem;
+        height: 30rem;
         background-color: rgb(255, 255, 255);
         margin: 0.5% 0.5%;
         box-shadow: 1px 1px 5px #69696963;
@@ -114,7 +114,7 @@
 
 @media only screen and (min-width: 1025px) and (max-width: 1440px){
     .vege-products{
-        height: 28rem;
+        height: 34rem;
         width: 99%;
         background-color: rgb(255, 255, 255);
         margin: 0.5% 0.5%;

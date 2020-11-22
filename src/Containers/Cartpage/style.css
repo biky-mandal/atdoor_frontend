@@ -1,0 +1,27 @@
+.box-div{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #edf5eb;
+}
+
+.box1-div{
+    position: absolute;
+    width: 58%;
+    height: auto;
+    left: 4rem;
+    top: 5rem;
+    background-color: #edf5eb;
+}
+
+.box2-div{
+    position: fixed;
+    width: 30%;
+    height: 85%;
+    top: 5rem;
+    right: 4rem;
+    background-color: white;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0px 0px 3px #b3b3b3;
+    border-radius: 5px;
+}
