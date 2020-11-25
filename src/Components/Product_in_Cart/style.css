@@ -19,7 +19,7 @@
 
 .r-div_cart{
     position: absolute;
-    width: 34rem;
+    width: 70%;
     background-color: #ffffff;
     height: 11rem;
     top: 0.5rem;
@@ -36,6 +36,7 @@
     line-height: 2rem;
     border-bottom: 1px solid #d3d3d3;
 }
+
 .cart-product-title-div label{
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -51,9 +52,9 @@
 }
 .below-section-cart-div{
     width: 100%;
-    height: 6rem;
+    height: 8rem;
     margin-top: 1rem;
-    background-color: #ffc5c5;
+    background-color: #ffffff;
 }
 
 .below-section-price-div{
@@ -61,6 +62,7 @@
     width: 100%;
     background-color: #ffffff;
     display: flex;
+    padding-left: 1rem;
 }
 .product-price-cart-div{
     height: 2rem;
@@ -72,23 +74,62 @@
     width: 100%;
     background-color: #ffffff;
     display: flex;
+    padding-left: 1rem;
 }
 .below-section-quantity-div{
     height: 2rem;
     width: 100%;
     background-color: #ffffff;
     display: flex;
+    padding-left: 1rem;
+}
+.below-section-delete-product-icon-div{
+    height: 2rem;
+    width: 100%;
+    background-color: #ffffff;
+    line-height: 2rem;
+    position: relative;
+}
+.delete-product-icon{
+    position: absolute;
+    right: 2rem;
+    color: #7e7e7e;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.delete-product-icon:hover{
+    color: #eb9797;
+}
+.plus-in-cart{
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5rem;
+    right: 0;
+    color: #7e7e7e;
+}
+.plus-in-cart:hover{
+    color: #10832d;
+}
+.minus-in-cart{
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5rem;
+    right: 4rem;
+    color: #7e7e7e;
+}
+.minus-in-cart:hover{
+    color: #f18b8b;
 }
 .price-heading-div{
     height: 2rem;
-    padding-right: 2rem;
+    padding-right: 1rem;
     line-height: 2rem;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #888888;
 }
 .product-price-2{
-    color: #5fa35f;
+    color: #2e522b;
     line-height: 2rem;
     font-size: 18px;
     font-weight: 400;
