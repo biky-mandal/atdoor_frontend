@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetch_cart_action } from '../../Actions/fetchCart_action';
 import { register_action } from '../../Actions';
 import { BiRupee } from 'react-icons/bi';
+import Loading from '../../Components/Loader';
 
 /**
 * @author
@@ -26,9 +27,10 @@ const CartPage = (props) => {
         }
     }, [])
 
-
-    console.log(products.products)
-    console.log(cart.cart.cartItems)
+    // When Cart items are not fetched it will show the loading.
+    if(!cart.cart.cartItems){
+        return <Loading/>
+    }
 
     return (
         <Layout>
