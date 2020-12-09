@@ -71,18 +71,22 @@ const Products_in_Cart = (props) => {
     }
 
     const product_minus_btn_clicked = () => {
-        const product = props._id
-        const quantity = (-parseFloat(user_input_quantity))
-        const price = (-parseFloat(user_input_amount))
-
-        const cartItems = {
-            product,
-            quantity,
-            price
-        } 
-
-        console.log(cartItems);
-        dispatch(addToCart_Action(cartItems))
+        if(parseFloat(props.quantity) > parseFloat(props.base_quantity) ){
+            const product = props._id
+            const quantity = (-parseFloat(user_input_quantity))
+            const price = (-parseFloat(user_input_amount))
+    
+            const cartItems = {
+                product,
+                quantity,
+                price
+            } 
+    
+            console.log(cartItems);
+            dispatch(addToCart_Action(cartItems))
+        }else{
+            product_delete_btn_clicked();
+        }
     }
 
     return (

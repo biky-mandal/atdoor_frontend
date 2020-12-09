@@ -25,7 +25,7 @@ const CartPage = (props) => {
             const currentUserId = register.customer._id
             dispatch(fetch_cart_action(currentUserId));
         }
-    }, [])
+    }, [register, products, cart])
 
     // When Cart items are not fetched it will show the loading.
     if(!cart.cart.cartItems){
