@@ -26,3 +26,7 @@ export const cartConstants = {
     ADD_TO_CART_REQUEST : "ADD_TO_CART_REQUEST",
     FETCH_CART_SUCCESS : "FETCH_CART_SUCCESS"
 }
+
+export const searchConstants = {
+    ADD_SEARCH_ARRAY : "ADD_SEARCH_ARRAY"
+}

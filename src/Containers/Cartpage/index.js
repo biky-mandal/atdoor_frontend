@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './style.css';
 import Layout from '../../Components/Layout';
 import Products_in_Cart from '../../Components/Product_in_Cart';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetch_cart_action } from '../../Actions/fetchCart_action';
-import { register_action } from '../../Actions';
+// import { register_action } from '../../Actions';
 import { BiRupee } from 'react-icons/bi';
 import Loading from '../../Components/Loader';
 
@@ -21,15 +21,15 @@ const CartPage = (props) => {
     const cart = useSelector(state => state.cart)
 
     useEffect(() => {
-        if (register.authenticate) {
+        if (register.authenticate && cart.cart.cartItems) {
             const currentUserId = register.customer._id
             dispatch(fetch_cart_action(currentUserId));
         }
-    }, [register, products, cart])
+    })
 
     // When Cart items are not fetched it will show the loading.
     if(!cart.cart.cartItems){
-        return <Loading/>
+        return <Loading label="Loading your Cart..."/>
     }
 
     return (

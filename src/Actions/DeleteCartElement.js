@@ -1,5 +1,5 @@
 import axios from '../Helpers/axios';
-import { cartConstants } from './Constants';
+// import { cartConstants } from './Constants';
 
 
 export const Delete_cart_action = (cartItems) => {

@@ -87,6 +87,8 @@ export default (state = initState, action) => {
                 authenticate: false
             }
         break;
+        default:
+            break;
     }
     return state;
 }

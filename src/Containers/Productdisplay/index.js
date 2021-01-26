@@ -1,33 +1,28 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import Layout from '../../../Components/Layout';
-import MenuHeader from '../../../Components/MenuHeader';
-import Home1Slider from '../../../Components/Sliders/Home1Silder';
-import Product_Card from '../../../Components/ProductCard';
-import './style.css';
+import React from 'react'
+import { useSelector } from 'react-redux'
+import Layout from '../../Components/Layout'
+import MenuHeader from '../../Components/MenuHeader'
+import Product_Card from '../../Components/ProductCard'
 
 /**
 * @author
-* @function Vegetable_Page
+* @function ProductDisplay
 **/
 
-const Vegetable_Page = (props) => {
-
+const ProductDisplay = (props) => {
     const products = useSelector(state => state.products);
-    const categories = useSelector(state => state.categories);
 
-    return (
+    return(
         <Layout>
             <MenuHeader/>
-            <Home1Slider/>
-            <div className="vege-page-main-div">
-                <div className="vege-heading-div">
-                    <label>Fresh Vegetables</label>
-                </div>
-                <div className='vege-body-div'>
+            <div className="cards">
+                {/* {props.location.aboutProps} */}
                 {
+                    products.products ? 
                         products.products.map(product => {
-                            if(categories.categories[0]._id === product.category){
+                            // console.log(product._id)
+                            if(product._id == props.location.aboutProps){
+                                // console.log(product)
                                 return <Product_Card
                                     key = {product._id}
                                     _id = {product._id}
@@ -43,12 +38,12 @@ const Vegetable_Page = (props) => {
                                 />
                             }
                         })
-                    }
-                </div>  
-            </div>  
+                    :
+                    null
+                }
+                </div>
         </Layout>
     )
-
 }
 
-export default Vegetable_Page
+export default ProductDisplay

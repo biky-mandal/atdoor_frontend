@@ -10,7 +10,7 @@ import Loader from 'react-loader-spinner'
 const Loading = (props) => {
     return (
             <div className="loading-div">
-                <Loader type="Oval" color="#dd821a" height={60} width={60} />
+                <Loader type="Oval" color="#1fb927" height={60} width={60} />
                 <label className="loading-lbl">{props.label}</label>
             </div>
     )

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import Layout from '../../Components/Layout';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";

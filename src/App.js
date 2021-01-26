@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 // Imported by me Manually.
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Homepage from './Containers/Homepage';
 import Signuppage from './Containers/Signuppage'
 import Loginpage from './Containers/Loginpage';
@@ -20,7 +20,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { isUserLoggedIn } from './Actions';
 // private Route
 import PrivateRoute from './Components/HOC/Private_Route';
-import { fetch_cart_action } from './Actions/fetchCart_action';
+import ProductDisplay from './Containers/Productdisplay';
+// import { fetch_cart_action } from './Actions/fetchCart_action';
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
         <Route path="/dryfishes" component={DryFish_Page} />
         <Route path="/groceries" component={Grocery_Page} />
         <Route path="/dairy" component={Dairy_Page} />
+        <Route path="/product" component={ProductDisplay} />
       </Switch>
     </div>
   );

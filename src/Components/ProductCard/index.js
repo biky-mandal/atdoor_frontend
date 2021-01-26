@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './style.css';
 import { BiRupee } from 'react-icons/bi';
-import bg1 from '../../Resources/cat-vege.png';
 import { generatePublicUrl } from '../../urlConfig';
 import { useDispatch } from 'react-redux';
+import {NavLink} from 'react-router-dom';
 import { addToCart_Action } from '../../Actions';
 /**
 * @author
@@ -136,9 +136,9 @@ const Product_Card = (props) => {
                         </button>
                         {
                             changebutton ?
-                                <button onClick={open_cart_clicked} className="add-to-cart-div">
+                                <NavLink to='cart' className="add-to-cart-div">
                                     Open Cart
-                                </button>
+                                </NavLink>
                                 :
                                 <button onClick={add_to_cart_clicked} className="add-to-cart-div">
                                     Add To Cart

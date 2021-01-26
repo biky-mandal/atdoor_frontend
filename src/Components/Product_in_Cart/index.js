@@ -1,5 +1,5 @@
-import React,{useState}from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useDispatch} from 'react-redux';
 import { generatePublicUrl } from '../../urlConfig';
 import './style.css';
 import { BiRupee } from 'react-icons/bi';
@@ -14,20 +14,23 @@ import { addToCart_Action } from '../../Actions';
 
 const Products_in_Cart = (props) => {
 
-    const products = useSelector(state => state.products)
+    // const products = useSelector(state => state.products)
     const dispatch = useDispatch();
-    const [user_input_quantity, setUser_input_quantity] = useState(
-        props.base_quantity
-    );
-    const [user_input_amount, setUser_input_amount] = useState(
+    const user_input_quantity = props.base_quantity;
+    // const [user_input_quantity, setUser_input_quantity] = useState(
+    //     props.base_quantity
+    // );
+    const user_input_amount = props.amt_selling_price ? props.amt_selling_price : props.qty_selling_price;
+    // const [user_input_amount, setUser_input_amount] = useState(
 
-        props.amt_selling_price ?
-            props.amt_selling_price
-            :
-            props.qty_selling_price
-    );
+    //     props.amt_selling_price ?
+    //         props.amt_selling_price
+    //         :
+    //         props.qty_selling_price
+    // );
 
-    const all_Product = products.products;
+    // const all_Product = products.products;
+
     // _id = {product._id}
     // title={product.name}
     // product_picture={product.productPictures[0].img}

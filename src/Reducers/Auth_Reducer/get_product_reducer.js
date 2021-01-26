@@ -12,6 +12,8 @@ export default (state = initState, action) => {
                 products: action.payload.products
             }
             break;
+        default:
+            break;
     }
     return state
 }

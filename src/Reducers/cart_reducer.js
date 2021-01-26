@@ -12,6 +12,8 @@ export default (state = initState, action) => {
                 cart: action.payload.cart
             }
             break;
+        default:
+            break;
     }
     return state
 }

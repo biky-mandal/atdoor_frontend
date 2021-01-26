@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './style.css';
 import Layout from '../../Components/Layout';
 import MenuHeader from '../../Components/MenuHeader';
@@ -34,6 +34,7 @@ const Homepage = (props) => {
                         products.products.map(product => {
                             if(categories.categories[0]._id === product.category){
                                 return <Product_Card
+                                key = {product._id}
                                 _id = {product._id}
                                 title={product.name}
                                 product_picture={product.productPictures[0].img}
@@ -56,13 +57,14 @@ const Homepage = (props) => {
                     <label className="Product-title">
                         Fresh Fruits
                     </label>
-                    <NavLink to={'vegetables'} className="view-more">View All</NavLink>
+                    <NavLink to={'fruits'} className="view-more">View All</NavLink>
                 </div>
                 <div className="cards">
                 {
                         products.products.map(product => {
                             if(categories.categories[1]._id === product.category){
                                 return <Product_Card
+                                key = {product._id}
                                 _id = {product._id}
                                 title={product.name}
                                 product_picture={product.productPictures[0].img}
@@ -86,13 +88,14 @@ const Homepage = (props) => {
                     <label className="Product-title">
                         Dry Fishes
                     </label>
-                    <NavLink to={'vegetables'} className="view-more">View All</NavLink>
+                    <NavLink to={'dryfishes'} className="view-more">View All</NavLink>
                 </div>
                 <div className="cards">
                 {
                         products.products.map(product => {
                             if(categories.categories[2]._id === product.category){
                                 return <Product_Card
+                                key = {product._id}
                                 _id = {product._id}
                                 title={product.name}
                                 product_picture={product.productPictures[0].img}
@@ -116,13 +119,14 @@ const Homepage = (props) => {
                     <label className="Product-title">
                         Grocery
                     </label>
-                    <NavLink to={'vegetables'} className="view-more">View All</NavLink>
+                    <NavLink to={'groceries'} className="view-more">View All</NavLink>
                 </div>
                 <div className="cards">
                 {
                         products.products.map(product => {
                             if(categories.categories[3]._id === product.category){
                                 return <Product_Card
+                                key = {product._id}
                                 _id = {product._id}
                                 title={product.name}
                                 product_picture={product.productPictures[0].img}
@@ -145,13 +149,14 @@ const Homepage = (props) => {
                     <label className="Product-title">
                         Dairy & Sweets
                     </label>
-                    <NavLink to={'vegetables'} className="view-more">View All</NavLink>
+                    <NavLink to={'dairy'} className="view-more">View All</NavLink>
                 </div>
                 <div className="cards">
                 {
                         products.products.map(product => {
                             if(categories.categories[4]._id === product.category){
                                 return <Product_Card
+                                key = {product._id}
                                 _id = {product._id}
                                 title={product.name}
                                 product_picture={product.productPictures[0].img}

@@ -132,11 +132,36 @@
         outline: none;
         border: none;
         background-color: white;
-        color: #4c5c78;
+        color: #ec9c3f;
         transition: all 0.5s;
     }
     .search-btn:hover{
         color: #06990e;
+    }
+
+    .display_div{ 
+        position: fixed;
+        width: 94%;
+        height: auto;
+        z-index: 100;
+        right: 3%;
+        left: 3%;
+        top: 7rem;
+        border-radius: 5px;
+        box-shadow: 0 1px 20px #00000036;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+    .display_text{
+        line-height: 2rem;
+        padding-left: 1rem;
+        color: #4c5c78;
+        font-size: 16px;
+        cursor: pointer;
+        font-family: 'poppins', sans-serif;
     }
     /* .drop-down-class{
         margin-right: 3rem !important;
@@ -258,6 +283,30 @@
     .search-btn:hover{
         color: #06990e;
     }
+    .display_div{ 
+        position: fixed;
+        width: 94%;
+        height: auto;
+        z-index: 100;
+        right: 3%;
+        left: 3%;
+        top: 7rem;
+        border-radius: 5px;
+        box-shadow: 0 1px 20px #00000036;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+    .display_text{
+        line-height: 2rem;
+        padding-left: 1rem;
+        color: #4c5c78;
+        font-size: 16px;
+        cursor: pointer;
+        font-family: 'poppins', sans-serif;
+    }
 }
 
 @media only screen and (min-width: 1025px){
@@ -376,6 +425,30 @@
     }
     .search-btn:hover{
         color: #06990e;
+    }
+    .display_div{ 
+        position: fixed;
+        width: 94%;
+        height: auto;
+        z-index: 100;
+        right: 3%;
+        left: 3%;
+        top: 7rem;
+        border-radius: 5px;
+        box-shadow: 0 1px 20px #00000036;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+    .display_text{
+        line-height: 2rem;
+        padding-left: 1rem;
+        color: #4c5c78;
+        font-size: 16px;
+        cursor: pointer;
+        font-family: 'poppins', sans-serif;
     }
     /* .drop-down-class{
         margin-right: 3rem !important;

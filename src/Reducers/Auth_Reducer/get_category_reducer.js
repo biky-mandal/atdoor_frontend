@@ -12,6 +12,8 @@ export default (state = initState, action) => {
                 categories: action.payload.categories
             }
             break;
+        default:
+            break;
     }
     return state
 }

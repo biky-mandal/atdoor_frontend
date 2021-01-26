@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './style.css';
 // from bootstarp
-import { Navbar, NavDropdown, Nav, Form, Button, FormControl } from 'react-bootstrap';
+import { Navbar, Nav, Form, FormControl } from 'react-bootstrap';
 //
-import { FiUser, FiLogIn, FiUserPlus, FiSearch, FiChevronDown, FiChevronUp, FiShoppingCart } from "react-icons/fi";
+import { FiUser, FiSearch, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import {FaShoppingCart} from 'react-icons/fa'
 import { BsChat, BsExclamationCircle, BsCardChecklist, BsBackspace } from "react-icons/bs";
 // Link
-import { NavLink, Redirect } from 'react-router-dom';
+import { NavLink, Redirect} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Logout_Action } from '../../Actions/Auth_Actions/Logout_Action';
 
@@ -15,12 +15,18 @@ import { Logout_Action } from '../../Actions/Auth_Actions/Logout_Action';
 /**
 * @author
 * @function Header
-**/
+**/ 
 
 const Header = (props) => {
 
+    const [searchDisplay, setSearchDisplay] = useState(false);
+    const [filter_Product, setFilterProduct] = useState([]);
+
     const dispatch = useDispatch();
     const register = useSelector(state => state.register);
+    const products = useSelector(state => state.products);
+    const searched_product = useSelector(state => state.filterProducts);
+
 
     const [showMore, setShowMore] = useState(false);
     // Toggle function to toggle the more options
@@ -63,6 +69,31 @@ const Header = (props) => {
         );
     }
 
+    const display_text = (e) => {
+        // Prevents default loading while Submitting a form.
+        e.preventDefault();
+        // Store the string that User searched into a const.
+        const searchString = document.getElementById('search_id').value.toUpperCase();
+        // console.log(products.products);
+        
+        // Displaying the product which matched.
+        let filterProduct = [];
+        products.products.map(product => {
+            if(product.name.toUpperCase().indexOf(searchString) > -1 ){
+                return filterProduct.push(product);
+            }
+        })
+        setFilterProduct(filterProduct);
+        // dispatch(search_action(filterProduct));
+
+        setSearchDisplay(true);
+
+        // This function Checks that the searh bar is Empty or not 
+        //  If it is empty it Will Show Nothing.
+        if(document.getElementById('search_id').value === ''){
+            setSearchDisplay(false);
+        }
+    }
 
 
     return (
@@ -78,7 +109,7 @@ const Header = (props) => {
                             </li>
                         </Nav> */}
                         <Form inline className="search-form">
-                            <FormControl type="text" placeholder="Search Products" className="mr-sm-2 inpt-field" />
+                            <FormControl onKeyUp={display_text} id="search_id" type="text" placeholder="Search Products" className="mr-sm-2 inpt-field" />
                             <button className="search-btn"><FiSearch /></button>
                         </Form>
                     </Nav>
@@ -88,7 +119,7 @@ const Header = (props) => {
                             <label id="more_btn" className="more-lbl" onClick={expandMore}>More{showMore ? <span>{showMore}<FiChevronUp /></span> : <span>{showMore}<FiChevronDown /></span>}</label>
                         </div>
                         {register.authenticate ? <div className="drop-div">
-                        <NavLink to="cart" className="login-lbl"><FaShoppingCart/> cart</NavLink>
+                            <NavLink to="cart" className="login-lbl"><FaShoppingCart/> cart</NavLink>
                         </div>
                         : null
                         }
@@ -117,7 +148,30 @@ const Header = (props) => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-
+            {
+                searchDisplay ? 
+                    filter_Product.length > 0 ? 
+                        <div className="display_div">
+                            {
+                                filter_Product.map(prod => {
+                                    return <div key={prod._id} className="display_text">
+                                        <NavLink to={
+                                            {
+                                                pathname:'/product',
+                                                aboutProps:[
+                                                    prod._id
+                                                ]
+                                            }
+                                        } className="more-ele-lbl">{prod.name}</NavLink>
+                                    </div>
+                                })
+                            }
+                        </div>
+                    :
+                        null
+                :
+                null
+            }
         </>
     )
 
