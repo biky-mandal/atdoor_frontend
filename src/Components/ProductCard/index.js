@@ -84,10 +84,6 @@ const Product_Card = (props) => {
         console.log(cartItems);
         dispatch(addToCart_Action(cartItems))
     }
-
-    const open_cart_clicked = () => {
-
-    }
     return (
         <div className="product-card">
             <div className="product-card-image-div">

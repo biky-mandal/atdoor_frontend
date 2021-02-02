@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import Layout from '../../Components/Layout';
 import Products_in_Cart from '../../Components/Product_in_Cart';
@@ -20,16 +20,9 @@ const CartPage = (props) => {
     const products = useSelector(state => state.products)
     const cart = useSelector(state => state.cart)
 
-    useEffect(() => {
-        if (register.authenticate && cart.cart.cartItems) {
-            const currentUserId = register.customer._id
-            dispatch(fetch_cart_action(currentUserId));
-        }
-    })
-
     // When Cart items are not fetched it will show the loading.
     if(!cart.cart.cartItems){
-        return <Loading label="Loading your Cart..."/>
+        return <Loading label="Loading."/>
     }
 
     return (
@@ -43,26 +36,34 @@ const CartPage = (props) => {
                         // Here in the code snippet we apply to condition 
                         products.products ?
                             products.products.map(product => {
-                                return cart.cart.cartItems.map(items => {
-                                    if (product._id === items.product) {
-                                        return <Products_in_Cart
-                                            _id={product._id}
-                                            title={product.name}
-                                            product_picture={product.productPictures[0].img}
-                                            amt_original_price={parseFloat(product.amt_original_price) * parseFloat(product.base_quantity)}
-                                            amt_selling_price={parseFloat(product.amt_selling_price) * parseFloat(product.base_quantity)}
-                                            qty_original_price={parseFloat(product.qty_original_price) * parseFloat(product.base_quantity)}
-                                            qty_selling_price={parseFloat(product.qty_selling_price) * parseFloat(product.base_quantity)}
-                                            unit={product.unit}
-                                            qtyunit={product.qtyunit}
-                                            base_quantity={product.base_quantity}
-                                            description={product.description}
-                                            //
-                                            quantity={items.quantity}
-                                            price={items.price}
-                                        />
-                                    }
-                                })
+                                if(cart.cart.cartItems){
+                                    return cart.cart.cartItems.map(items => {
+                                        if (product._id === items.product) {
+                                            return <Products_in_Cart
+                                                key={product._id}
+                                                _id={product._id}
+                                                title={product.name}
+                                                product_picture={product.productPictures[0].img}
+                                                amt_original_price={parseFloat(product.amt_original_price) * parseFloat(product.base_quantity)}
+                                                amt_selling_price={parseFloat(product.amt_selling_price) * parseFloat(product.base_quantity)}
+                                                key={product._id}
+                                                _id={product._id}
+                                                title={product.name}
+                                                product_picture={product.productPictures[0].img}
+                                                amt_original_price={parseFloat(product.amt_original_price) * parseFloat(product.base_quantity)}
+                                                amt_selling_price={parseFloat(product.amt_selling_price) * parseFloat(product.base_quantity)}
+                                                qty_original_price={parseFloat(product.qty_original_price) * parseFloat(product.base_quantity)}
+                                                qty_selling_price={parseFloat(product.qty_selling_price) * parseFloat(product.base_quantity)}
+                                                unit={product.unit}
+                                                qtyunit={product.qtyunit}
+                                                base_quantity={product.base_quantity}
+                                                description={product.description}
+                                                quantity={items.quantity}
+                                                price={items.price}
+                                            />
+                                        }
+                                    })  
+                                }
                             })
                             :
                             null

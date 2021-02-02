@@ -90,32 +90,32 @@
     .delete-product-icon{
         position: absolute;
         right: 2rem;
-        color: #7e7e7e;
+        color: #a0a0a0;
         cursor: pointer;
         font-size: 1.2rem;
     }
     .delete-product-icon:hover{
-        color: #eb9797;
+        color: #f05252;
     }
     .plus-in-cart{
         position: absolute;
         cursor: pointer;
         font-size: 1.2rem;
         right: 0;
-        color: #7e7e7e;
+        color: #fd7e14;
     }
     .plus-in-cart:hover{
-        color: #10832d;
+        color: #c4c4c4;
     }
     .minus-in-cart{
         position: absolute;
         cursor: pointer;
         font-size: 1.2rem;
         right: 4rem;
-        color: #7e7e7e;
+        color: #6c757d;
     }
     .minus-in-cart:hover{
-        color: #f18b8b;
+        color: #bdbdbd;
     }
     .price-heading-div{
         height: 1.5rem;

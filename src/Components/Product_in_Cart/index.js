@@ -1,11 +1,13 @@
-import React from 'react';
-import { useDispatch} from 'react-redux';
+import React, { useState , useEffect} from 'react';
+import { useDispatch, useSelector} from 'react-redux';
 import { generatePublicUrl } from '../../urlConfig';
 import './style.css';
 import { BiRupee } from 'react-icons/bi';
 import {AiFillPlusCircle, AiFillMinusCircle, AiFillDelete} from 'react-icons/ai';
 import { Delete_cart_action } from '../../Actions/DeleteCartElement';
-import { addToCart_Action } from '../../Actions';
+import { addToCart_Action, fetch_cart_action } from '../../Actions';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from 'react-loader-spinner'
 
 /**
 * @author
@@ -14,35 +16,25 @@ import { addToCart_Action } from '../../Actions';
 
 const Products_in_Cart = (props) => {
 
-    // const products = useSelector(state => state.products)
+    const cart = useSelector(state => state.cart);
+    const products = useSelector(state => state.products);
+    const register = useSelector(state => state.register);
     const dispatch = useDispatch();
+
     const user_input_quantity = props.base_quantity;
-    // const [user_input_quantity, setUser_input_quantity] = useState(
-    //     props.base_quantity
-    // );
     const user_input_amount = props.amt_selling_price ? props.amt_selling_price : props.qty_selling_price;
-    // const [user_input_amount, setUser_input_amount] = useState(
 
-    //     props.amt_selling_price ?
-    //         props.amt_selling_price
-    //         :
-    //         props.qty_selling_price
-    // );
+    useEffect(() => {
+        console.log("Updated!")
+    },[])
 
-    // const all_Product = products.products;
-
-    // _id = {product._id}
-    // title={product.name}
-    // product_picture={product.productPictures[0].img}
-    // amt_original_price = {parseFloat(product.amt_original_price) * parseFloat(product.base_quantity)}
-    // amt_selling_price = {parseFloat(product.amt_selling_price) * parseFloat(product.base_quantity)}
-    // qty_original_price = {parseFloat(product.qty_original_price) * parseFloat(product.base_quantity)}
-    // qty_selling_price = {parseFloat(product.qty_selling_price) * parseFloat(product.base_quantity)}
-    // unit = {product.unit}
-    // qtyunit = {product.qtyunit}
-    // base_quantity = {product.base_quantity}
+    if(cart.added){
+        const currentUserId = register.customer._id
+        dispatch(fetch_cart_action(currentUserId));
+    }
 
     const product_delete_btn_clicked = () => {
+
         const product = props._id
         const quantity = props.quantity
         const price = props.price
@@ -59,6 +51,7 @@ const Products_in_Cart = (props) => {
 
     const product_plus_btn_clicked = () => {
 
+        // setLoad(true);
         const product = props._id
         const quantity = parseFloat(user_input_quantity)
         const price = parseFloat(user_input_amount)
@@ -68,12 +61,24 @@ const Products_in_Cart = (props) => {
             quantity,
             price
         } 
-
-        console.log(cartItems);
-        dispatch(addToCart_Action(cartItems))
+        // Checking for item is available or not.
+        cart.cart.cartItems.map(item => {
+            // go through all the elements of cartItems
+            if(item.product === product){ // select where item product id === product id
+                products.products.map(prod => {
+                    if(prod._id === product){ // This condition prevent backend more backend call
+                        if(parseFloat(prod.stock_amount) > item.quantity){ // Check whether item amount exist or not.
+                            dispatch(addToCart_Action(cartItems))
+                        }
+                    }
+                })
+            }
+        })
+        
     }
 
     const product_minus_btn_clicked = () => {
+
         if(parseFloat(props.quantity) > parseFloat(props.base_quantity) ){
             const product = props._id
             const quantity = (-parseFloat(user_input_quantity))
@@ -84,8 +89,6 @@ const Products_in_Cart = (props) => {
                 quantity,
                 price
             } 
-    
-            console.log(cartItems);
             dispatch(addToCart_Action(cartItems))
         }else{
             product_delete_btn_clicked();
@@ -127,7 +130,13 @@ const Products_in_Cart = (props) => {
                     </div>
                     <div className="below-section-delete-product-icon-div">
                         <div onClick={product_plus_btn_clicked} className="plus-in-cart"><AiFillPlusCircle/></div>
-                        <div onClick={product_delete_btn_clicked} className="delete-product-icon"><AiFillDelete/></div>
+                        {
+                            cart.fetching ? 
+                                <Loader type="TailSpin" color="#dc3545" className="delete-product-icon" height={18} width={18} />
+                                :
+                                <div onClick={product_delete_btn_clicked} className="delete-product-icon"><AiFillDelete/></div>
+                                
+                        }
                         <div onClick={product_minus_btn_clicked}  className="minus-in-cart"><AiFillMinusCircle/></div>
                     </div>
                 </div>

@@ -21,7 +21,7 @@ import { isUserLoggedIn } from './Actions';
 // private Route
 import PrivateRoute from './Components/HOC/Private_Route';
 import ProductDisplay from './Containers/Productdisplay';
-// import { fetch_cart_action } from './Actions/fetchCart_action';
+import { fetch_cart_action } from './Actions/fetchCart_action';
 
 function App() {
 
@@ -31,9 +31,11 @@ function App() {
   useEffect(() => {
     if (!register.authenticate) {
       dispatch(isUserLoggedIn());
+    }else{
+      const currentUserId = register.customer._id
+      dispatch(fetch_cart_action(currentUserId));
+      dispatch(Get_initialdata());
     }
-
-    dispatch(Get_initialdata());
   })
 
   return (
