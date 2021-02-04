@@ -36,3 +36,8 @@ export const cartConstants = {
 export const searchConstants = {
     ADD_SEARCH_ARRAY : "ADD_SEARCH_ARRAY"
 }
+
+export const orderConstants = {
+    ORDER_SUCCESS: "ORDER_SUCCESS",
+    PAYMENT_SUCCESS: "PAYMENT_SUCCESS"
+}
