@@ -1,0 +1,33 @@
+.profile_page_div{
+    width: 100%;
+    padding: 2rem 5%;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eaeee7;
+}
+.profile_image_div{
+    width: 12rem;
+    height: 12rem;
+    background-image: url('../../Resources/user.png');
+    background-size: cover;
+}
+.profile_contain_div{
+    width: 100%;
+    padding: 1rem 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile_name{
+    font-family: 'poppins', sans-serif;
+    color: #505050;
+    font-size: 1.5rem;
+}
+.profile_phone{
+    font-family: 'poppins', sans-serif;
+    color: #505050;
+    font-size: 1.5rem;  
+}

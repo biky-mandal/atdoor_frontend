@@ -1,0 +1,31 @@
+@media only screen and (max-width: 425px){
+    .order_details_div{
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-top: 1px solid #4eac3b70;
+    }
+    .item_lbl{
+        font-family: 'poppins', sans-serif;
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        line-height: 5rem;
+        color: #727272;
+    }
+    .quantity_lbl{
+        position: absolute;
+        font-family: 'poppins', sans-serif;
+        font-size: 1.2rem;
+        right: 7rem;
+        line-height: 5rem;
+        color: #464646;
+    }
+    .price_lbl{
+        position: absolute;
+        font-family: 'poppins', sans-serif;
+        font-size: 1.2rem;
+        right: 1rem;
+        line-height: 5rem;
+        color: #2e2e2e;
+    }
+}

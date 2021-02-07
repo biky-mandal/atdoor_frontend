@@ -1,0 +1,70 @@
+@media only screen and (max-width: 425px){
+    .order_page_div{
+        width: 100%;
+        height: auto;
+        padding-bottom: 2rem;
+        position: relative;
+    }
+    .my_order_lbl{
+        font-family: 'poppins', sans-serif;
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        color: #229745;
+    }
+    .order_div_1{
+        width: 90%;
+        height: auto;
+        background-color: #e4e4e421;
+        margin-left: 5%;
+        border: 2px solid #249620c5;
+        border-radius: 1rem;
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+        /* transition: all 0.5s ease;
+        overflow: hidden; */
+    }
+    /* .order_div_1.expand{
+        height: auto;
+    } */
+    .order_id_div{
+        width: 100%;
+        height: 5rem;
+        position: relative;
+    }
+    .order_id_{
+        font-family: 'poppins', sans-serif;
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        line-height: 5rem;
+        color: #394439;
+    }
+    .order_id_lbl{
+        position: absolute;
+        font-family: 'poppins', sans-serif;
+        font-size: 1.2rem;
+        right: 1rem;
+        line-height: 5rem;
+        color: #e49937;
+    }
+    .order_id_div span{
+        position: absolute;
+        margin-left: 1rem;
+        line-height: 5rem;
+        font-size: 1.2rem;
+        right: 1rem;
+        color: #51b348;
+    }
+    .togglebtn{
+        position: absolute;
+        font-size: 1.2rem;
+        top: 1rem;
+        border: 1px solid #2297453f;
+        border-radius: 5px;
+        background-color: #cdf0cd1c;
+        right: 1rem;
+        width: 10rem;
+        height: 3rem;
+        color: #229745;
+    }
+}

@@ -2,7 +2,9 @@ import { orderConstants } from "../Actions/Constants"
 
 const initState = {
     orderDetails: [],
-    fetched: false
+    fetched: false,
+    allOrder:[],
+
 }
 
 export default (state = initState, action) => {
@@ -12,6 +14,18 @@ export default (state = initState, action) => {
                 ...state,
                 fetched: true,
                 orderDetails: action.payload.orderDetails
+            }
+            break;
+        case orderConstants.CODORDER_SUCCESS:
+            state = {
+                ...state,
+                fetched: true
+            }
+            break;
+        case orderConstants.FETCH_ORDER_SUCCESS:
+            state = {
+                ...state,
+                allOrder: action.payload.allOrder
             }
             break;
         default:

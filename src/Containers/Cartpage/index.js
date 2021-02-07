@@ -7,10 +7,10 @@ import { fetch_cart_action } from '../../Actions/fetchCart_action';
 // import { register_action } from '../../Actions';
 import { BiRupee } from 'react-icons/bi';
 import Loading from '../../Components/Loader';
-import { placeOrderAction } from '../../Actions/placeorder';
 import { paymentaction } from '../../Actions/paymentAction';
 import {API_URL} from '../../urlConfig';
 import { NavLink } from 'react-router-dom';
+import { codOrderAction } from '../../Actions/codplaceorder';
 
 
 /**
@@ -30,6 +30,11 @@ const CartPage = (props) => {
     const [userName, setUserName] = useState('');
     const [userEmail, setUseremail] = useState('');
 
+    useEffect(() => {
+        const currentUserId = register.customer._id
+        dispatch(fetch_cart_action(currentUserId));
+    },[])
+
     // When Cart items are not fetched it will show the loading.
     if (!cart.cart.cartItems) {
         // return <Loading label="Loading." />
@@ -43,6 +48,34 @@ const CartPage = (props) => {
             </Layout>
         );
     }
+
+    if(orderDetails.fetched){
+        return(
+            <Layout>
+                <div className="place-div">
+                    <span>Order Placed!</span>
+                    <label>We will reach you soon.</label>
+                    <NavLink to={'/'}>Home</NavLink>
+                </div>
+            </Layout>
+        );
+    }
+
+    // This function will run when somone order on COD
+    const codOrder = () => {
+
+        const deliveryCharge = 20
+        // TOtal Price
+        const amount = cart.cart.cartItems ? Math.floor(cart.cart.cartItems.reduce((tot, items) => {
+            return tot + items.price
+        }, 0)) + deliveryCharge
+            :
+            null
+        const orderItems = cart.cart.cartItems;
+
+        dispatch(codOrderAction(amount, orderItems))
+    }
+
     const fetchOrder = () => {
         showOrderpage(true)
     }
@@ -156,7 +189,7 @@ const CartPage = (props) => {
                                 onChange={e => setUseremail(e.target.value)}
                             />
                             <div className="pay-div">
-                                <div className="cash-on-div">
+                                <div onClick={codOrder} className="cash-on-div">
                                     Cash on Delivery
                                 </div>
                                 <div onClick={displayRazorpay} className="pay-now-div">

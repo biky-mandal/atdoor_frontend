@@ -133,10 +133,10 @@ const Header = (props) => {
                                         <NavLink to="order" className="more-ele-lbl"><span><BsCardChecklist /></span>Orders</NavLink>
                                     </div>
                                     <div className="drop-ele">
-                                        <NavLink to="login" className="more-ele-lbl"><span><BsExclamationCircle /></span>About Us</NavLink>
+                                        <NavLink to="about" className="more-ele-lbl"><span><BsExclamationCircle /></span>About Us</NavLink>
                                     </div>
                                     <div className="drop-ele">
-                                        <NavLink to="login" className="more-ele-lbl"><span><BsChat /></span>Contact Us</NavLink>
+                                        <NavLink to="contact" className="more-ele-lbl"><span><BsChat /></span>Contact Us</NavLink>
                                     </div>
                                     {
                                         register.authenticate ? renderLoggedInLinks() : null

@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import Layout from '../../Components/Layout';
+import { useSelector } from 'react-redux';
 
 /**
 * @author
@@ -8,9 +9,26 @@ import Layout from '../../Components/Layout';
 **/
 
 const Profile_Page = (props) => {
+
+    const register = useSelector(state => state.register)
+
+    
+
     return (
         <Layout>
-            Profile_Page
+            <div className="profile_page_div">
+                <div className="profile_image_div">
+
+                </div>
+                <div className="profile_contain_div">
+                    <label className="profile_name">
+                        {register.customer.fullName}
+                    </label>
+                    <label className="profile_phone">
+                        {register.customer.phoneNumber}
+                    </label>
+                </div>
+            </div>
         </Layout>
     )
 

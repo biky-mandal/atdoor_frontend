@@ -22,6 +22,9 @@ import { isUserLoggedIn } from './Actions';
 import PrivateRoute from './Components/HOC/Private_Route';
 import ProductDisplay from './Containers/Productdisplay';
 import { fetch_cart_action } from './Actions/fetchCart_action';
+import {fetchOrderAction} from './Actions/fetchOrderAction';
+import About from './Containers/About';
+import Contact from './Containers/Contact';
 
 function App() {
 
@@ -35,6 +38,7 @@ function App() {
       const currentUserId = register.customer._id
       dispatch(fetch_cart_action(currentUserId));
       dispatch(Get_initialdata());
+      dispatch(fetchOrderAction());
     }
   })
 
@@ -53,6 +57,8 @@ function App() {
         <Route path="/groceries" component={Grocery_Page} />
         <Route path="/dairy" component={Dairy_Page} />
         <Route path="/product" component={ProductDisplay} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
       </Switch>
     </div>
   );
